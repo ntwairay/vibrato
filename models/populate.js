@@ -40,7 +40,7 @@ const pallets = [
 ];
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost/pallet');
+mongoose.connect('mongodb://mongo/pallet');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 

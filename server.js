@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 import router from './routers/router.js';
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost/pallet');
+mongoose.connect('mongodb://mongo/pallet');
 
 // Initialize http server
 const app = express();
@@ -16,5 +16,5 @@ app.use('/vibratoapi', router);
 
 const server = app.listen(3000, () => {
   const { address, port } = server.address();
-  console.log(`Listening at http://${address}:${port}`);
+  console.log(`Listening at http://localhost`);
 });
