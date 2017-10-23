@@ -1,0 +1,29 @@
+version: "2"
+services:
+
+  nginx:
+    container_name: nginx
+    build: ./docker/nginx
+    links:
+      - app:app
+    ports:
+      - "80:80"
+
+  mongo:
+    container_name: mongo
+    image: mongo
+    command: --smallfiles
+    ports:
+      - "27017:27017"
+
+  app:
+    container_name: web-app
+    restart: always
+    build: ./docker/web-app
+    volumes:
+      - .:/app
+    ports:
+      - "3000"
+    links:
+      - mongo:mongo
+    command:  bash -c "node_modules/babel-cli/bin/babel-node.js models/populate.js && npm start"
