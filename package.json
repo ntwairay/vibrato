@@ -7,18 +7,18 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node_modules/babel-cli/bin/babel.js ./ --source-maps --out-dir dist",
     "start": "node_modules/nodemon/bin/nodemon.js -- node_modules/babel-cli/bin/babel-node.js server.js",
-    "populate": "node_modules/babel-cli/bin/babel-node.js populate.js"
+    "populate": "node_modules/babel-cli/bin/babel-node.js ./models/populate.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ntwairay/vibrato_movie_web_app.git"
+    "url": "git+https://github.com/ntwairay/vibrato_pallet_tracker_web_app.git"
   },
   "author": "Ray Ng",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ntwairay/vibrato_movie_web_app/issues"
+    "url": "https://github.com/ntwairay/vibrato_pallet_tracker_web_app.git/issues"
   },
-  "homepage": "https://github.com/ntwairay/vibrato_movie_web_app#readme",
+  "homepage": "https://github.com/ntwairay/vibrato_pallet_tracker_web_app.git#readme",
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",

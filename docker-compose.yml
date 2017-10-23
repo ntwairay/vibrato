@@ -26,4 +26,4 @@ services:
       - "3000"
     links:
       - mongo:mongo
-    command:  bash -c "node_modules/babel-cli/bin/babel-node.js models/populate.js && npm start"
+    command:  bash -c "npm run populate && npm start"
